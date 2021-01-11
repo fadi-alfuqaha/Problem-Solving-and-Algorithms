@@ -1,4 +1,4 @@
-console.log('Problem Solving Q: 4 ');
+console.log("Problem Solving Q: 4 ");
 
 /* Username Validation */
 
@@ -14,7 +14,28 @@ If the username is valid then your program should return the string true, otherw
 */
 
 function usernameValidation(str) {
-  // YOUR CODE HERE
+  let strArray = str.split("");
+  lenghtOfStr = str.lenght;
+  let letterNumber = /^[0-9a-zA-Z_]+$/;
+  if (lenghtOfStr < 4 || lenghtOfStr > 25) {
+    console.log(1);
+    return false;
+  }
+  if (!/[a-zA-Z]/.test(strArray[0])) {
+    console.log(2);
+    return false;
+  }
+
+  if (!str.match(letterNumber)) {
+    console.log(3);
+    return false;
+  }
+  if (strArray[lenghtOfStr - 1] == "_") {
+    console.log(4);
+    return false;
+  }
+
+  return true;
 }
 
 /* 
