@@ -1,4 +1,4 @@
-console.log('Problem Solving Q: 5 ');
+console.log("Problem Solving Q: 5 ");
 
 /* Find Intersection */
 
@@ -7,8 +7,22 @@ Have the function FindIntersection(strArr) read the array of strings stored in s
 */
 
 function findIntersection(strArr) {
-  // YOUR CODE HERE
-  
+  let firstArray = strArr[0].split(", ");
+  let secondArray = strArr[1].split(", ");
+  let newArray = [];
+  console.log(firstArray);
+  console.log(secondArray);
+  for (let i = 0; i < firstArray.length; i++) {
+    for (let j = 0; j < secondArray.length; j++) {
+      if (firstArray[i] === secondArray[j]) {
+        newArray.push(firstArray[i]);
+      }
+      // } else if (secondArray[j] > firstArray[i]) {
+      //   break;
+      // }
+    }
+  }
+  return newArray;
 }
 
 /* 
@@ -16,4 +30,3 @@ Examples:
 findIntersection(['1, 3, 4, 7, 13', '1, 2, 4, 13, 15']); // => '1,4,13'
 findIntersection(['1, 3, 9, 10, 17, 18', '1, 4, 9, 10']); // => '1,9,10'
 */
-
