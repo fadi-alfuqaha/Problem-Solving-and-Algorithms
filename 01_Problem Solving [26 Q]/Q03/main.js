@@ -1,4 +1,4 @@
-console.log('Problem Solving Q: 3 ');
+console.log("Problem Solving Q: 3 ");
 
 /* First Reverse */
 
@@ -7,7 +7,12 @@ Have the function FirstReverse(str) take the str parameter being passed and retu
 */
 
 function firstReverse(str) {
-  // YOUR CODE HERE
+  let newstr = str.split("");
+  let newString = "";
+  for (let j = str.length - 1; j >= 0; j--) {
+    newString = newString + str[j];
+  }
+  return newString;
 }
 
 /* 
@@ -16,4 +21,3 @@ firstReverse('I Love Code'); // => 'edoC evoL I'
 firstReverse('Hello World'); // => 'dlroW olleH'
 firstReverse('How are you?'); // => '?uoy era woH'
 */
-
