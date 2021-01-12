@@ -1,4 +1,4 @@
-console.log('Problem Solving Q: 13');
+console.log("Problem Solving Q: 13");
 
 /* find Highest Possible Sum */
 
@@ -6,8 +6,19 @@ console.log('Problem Solving Q: 13');
 Write a function that calculates the Highest possible sum of any n consecutive numbers in an array arr of integers (where n ≥ 1).
 */
 
-function findHighestPossibleSum() {
-  // YOUR CODE HERE
+function findHighestPossibleSum(arr, num) {
+  let max_sum = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    let sum = 0;
+    for (let z = i; z < i + num; z++) {
+      sum = arr[z] + sum;
+    }
+    if (sum > max_sum) {
+      max_sum = sum;
+    }
+  }
+  return max_sum;
 }
 
 /* 
