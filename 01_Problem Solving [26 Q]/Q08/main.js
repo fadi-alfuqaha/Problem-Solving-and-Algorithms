@@ -1,4 +1,4 @@
-console.log('Problem Solving Q: 8');
+console.log("Problem Solving Q: 8");
 
 /* Unique Item */
 
@@ -6,7 +6,17 @@ console.log('Problem Solving Q: 8');
 Write a function that returns the number of unique items in an array.
 */
 
-function uniqueItems() {
+function uniqueItems(nums) {
+  const newArray = [];
+  newArray.push(nums[0]);
+  for (let i = 1; i < nums.length; i++) {
+    for (let j = 0; j < newArray.length; j++) {
+      if (!newArray.includes(nums[i])) {
+        newArray.push(nums[i]);
+      }
+    }
+  }
+  return newArray.length;
   // YOUR CODE HERE
 }
 
