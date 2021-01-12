@@ -1,4 +1,4 @@
-console.log('Problem Solving Q:18 ');
+console.log("Problem Solving Q:18 ");
 
 /*  findFactorial*/
 
@@ -7,8 +7,11 @@ Given an integer, n, return n! (n factorial)
 5! = 5 * 4 * 3 * 2 * 1
 */
 
-function findFactorial() {
-  // YOUR CODE HERE
+function findFactorial(n) {
+  if (n == 1) {
+    return 1;
+  }
+  return n * findFactorial(n - 1);
 }
 
 /* 
