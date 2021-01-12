@@ -1,4 +1,4 @@
-console.log('Problem Solving Q: 19');
+console.log("Problem Solving Q: 19");
 
 /* Is Part Of */
 
@@ -8,8 +8,13 @@ To simplify the problem, you can assume that both arrays will contain only strin
 */
 
 Array.prototype.isPartOf = function (array) {
-  // YOUR CODE HERE
-}
+  for (const item of this) {
+    if (!array.includes(item)) {
+      return false;
+    }
+  }
+  return true;
+};
 
 /* 
 Examples:
